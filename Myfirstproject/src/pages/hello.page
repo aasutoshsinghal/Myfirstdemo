@@ -1,0 +1,13 @@
+<apex:page >
+{! $user.FirstName & ' ' & $user.LastName}
+ <p> Today Date Is :- {! Today()}</p> 
+ <p> Next Week It Will Be :- {! Today()+ 7}</p>
+  <p> The Year Today is  :- {! year(Today())}</p>
+   <p> Tommorow Day number will be :- {! day(Today()+1)}</p>
+   <p> Lets find max {! max(1,1,2,3,4,5,6,4,5,7)}</p>
+   <p> Lets find min {! min(1,1,2,3,4,5,6,4,5,7)}</p>
+   <p> the square root of 49 si {!sqrt(49)}</P>
+   <p> Is it true:- {! contains('salesforce.com', 'force.com')}</p>
+   <p> {! If (contains('salesforce.com', 'force.com'), 'yup' , 'nop')}</p>
+   <p> {! If (Day(today()) > 14, 'After14ht', 'before 14th')}</p>
+</apex:page>

@@ -1,0 +1,5 @@
+<apex:page sidebar="false" showheader="false">
+    <p>Text Before</p>
+    <apex:include pageName="MainPage"/>
+    <p>Text After</p>
+</apex:page>

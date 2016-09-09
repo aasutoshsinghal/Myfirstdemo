@@ -1,0 +1,32 @@
+<apex:page id="pg">
+<apex:form id="fm" >
+     <apex:pageBlock id="pb">
+         <apex:pageBlockSection id="pbs1">
+             <apex:inputText id="one"/>
+         </apex:pageBlockSection>
+         <apex:pageBlockSection id="pbs2">
+             <apex:inputText id="two"/>
+             <apex:outputLabel id="three"/>
+         </apex:pageBlockSection>
+         <apex:commandButton onclick="demo()"  oncomplete="show()" value="click"/>
+     </apex:pageBlock>
+     </apex:form>
+     <script>
+             
+                 function show(){
+                     
+                     var name=document.getElementById('{!$Component.pg.fm.pb.pbs1.one}').value;
+                     document.getElementById('pg:fm:pb:pbs2:two').value=name;
+                     document.getElementById('pg:fm:pb:pbs2:three').innerHTML=name;
+                 
+                 
+                 }
+                 
+                 function demo(){
+                 
+                     alert('Testing');
+                 }
+     
+     </script>
+     
+</apex:page>

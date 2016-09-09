@@ -1,0 +1,13 @@
+<apex:page standardController="Account" >
+    <apex:pageBlock title="My Account Contact">
+    shri ram
+        <apex:pageblockTable value="{!account.contacts}" var="item">
+            <apex:column value="{! item.name}"/>
+            <apex:column value="{! item.fax}"/>
+            <apex:column value="{! item.phone}"/>
+            <apex:column value="{! account.industry}"/>
+        </apex:pageblockTable>
+        <apex:outputLink value="{! $page.accountdisplay}">click me</apex:outputLink>
+        <apex:outputLink value="{! urlfor($action.account.new)}">Create</apex:outputLink>
+    </apex:pageBlock>
+</apex:page>
